@@ -36,12 +36,15 @@ const Navbar = ({ title, icon }) => {
       <li>
         <Link to="/login">Login</Link>
       </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
     </Fragment>
   );
 
   return (
-    <div className="navbar bg-primary">
-      <h1>
+    <div className="navbar bg-blue">
+      <h1 className="text-size">
         <i className={icon} /> {title}
       </h1>
       <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
@@ -55,8 +58,8 @@ Navbar.propTypes = {
 };
 
 Navbar.defaultProps = {
-  title: "Contact Keeper",
-  icon: "fas fa-id-card-alt",
+  title: "Rocket Contacts",
+  icon: "fas fa-rocket",
 };
 
 export default Navbar;
